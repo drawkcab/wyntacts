@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<div class="center">
+  <img src="assets/wyncode.jpg">
 <h1>Listing Contacts</h1>
 
-<table>
+<table class="table table-condensed  table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -17,10 +19,10 @@
       <tr>
         <td><%= contact.name %></td>
         <td><%= contact.email %></td>
-        <td><%= contact.website %></td>
-        <td><%= link_to 'Show', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><a href=#{<%= contact.website %>}><%= contact.website %></a></td>
+        <td><%= link_to 'Show', contact, class:"btn btn-success btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_contact_path(contact), class:"btn btn-warning btn-xs" %></td>
+        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-danger btn-xs"%></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,5 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+<%= link_to 'New Contact', new_contact_path, class:"btn btn-info" %>
+</div>

@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+div.center {
+  width: 80%;
+  margin: 0 auto;
+}
+h1{
+  text-align: center;
+  text-shadow:2px 2px grey;
+}
+.btn{
+  color: white;
+}
+div img{
+  width:200px;
+  margin-left: 40%;
+}
